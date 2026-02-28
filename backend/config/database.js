@@ -26,7 +26,7 @@ const pool = new Pool({
   // How long to wait for a connection from the pool
   connectionTimeoutMillis: 10000,  // Increased timeout for cloud connections
 });
-
+console.log(pool);
 // Test database connection
 pool.on('connect', () => {
   console.log('Connected to PostgreSQL database');
