@@ -26,4 +26,27 @@ router.get('/', projectController.getAllProjects);
  */
 router.get('/:id', projectController.getProjectById);
 
+/**
+ * POST /api/projects
+ * Create a new project
+ * Body: { name, status, deadline, assignedTeamMember, budget }
+ * Returns: Created project object
+ */
+router.post('/', projectController.createProject);
+
+/**
+ * PUT /api/projects/:id
+ * Update an existing project
+ * Body: { name, status, deadline, assignedTeamMember, budget }
+ * Returns: Updated project object
+ */
+router.put('/:id', projectController.updateProject);
+
+/**
+ * DELETE /api/projects/:id
+ * Delete a project by ID
+ * Returns: Success message
+ */
+router.delete('/:id', projectController.deleteProject);
+
 module.exports = router;
